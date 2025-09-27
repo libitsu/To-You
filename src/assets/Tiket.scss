@@ -1,0 +1,54 @@
+.tiket{
+    background-color: rgb(253, 185, 196);
+    position: relative;
+    display: flex;
+    width: 30rem;
+    height: 8rem;
+    box-shadow: 0px 0px 2px gray;
+    overflow: hidden;
+
+    .border{
+        height: 100%;
+        border: 1px dashed;
+        margin-left: 2px;
+    }
+    span{
+        font-weight: bold;
+        position: absolute;
+        color: black;
+        font-size: .85rem;
+    }
+    .no{
+        top: 20%;
+        left: 2%;
+        font-size: 1.2rem;
+    }
+    .no-value{
+        font-size: 2rem;
+        color:firebrick;
+        font-weight: 300;
+        font-family: system-ui;
+        top: 20%;
+        left: 8%;
+    }
+    .info{
+        top: 15%;
+        right: 6%;
+    }
+    .bdm{
+        top: 30%;
+        right: 6%;
+        background-color: black;
+        color: rgb(253, 185, 196);
+        font-size: 1.2rem;
+        padding: .5rem;
+    }
+    .harga{
+        bottom: 20%;
+        width: 100%;
+    }
+    .free{
+        bottom: 10%;
+        width: 100%;
+    }
+}

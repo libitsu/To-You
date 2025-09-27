@@ -1,0 +1,45 @@
+.letter-white {
+  position: relative;
+  background: #fffdf7;
+  padding-top: 0.5rem;
+  padding-left: 2rem;
+  width: 200px;
+  height: 200px;
+  font-family: sans-serif;
+  position: relative;
+  clip-path: polygon(
+    0 0,
+    14px 4%,
+    3px 8%,
+    18px 13%,
+    5px 19%,
+    16px 25%,
+    2px 32%,
+    20px 38%,
+    6px 44%,
+    17px 51%,
+    4px 57%,
+    18px 63%,
+    8px 69%,
+    15px 74%,
+    3px 80%,
+    19px 86%,
+    6px 92%,
+    14px 97%,
+    0 100%,
+    100% 100%,
+    100% 0
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  span {
+    display: flex;
+    color: black;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 2rem;
+    padding-left: 2rem;
+  }
+}

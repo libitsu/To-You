@@ -1,0 +1,142 @@
+.main-card {
+  text-align: center;
+  background-color: #282c34;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: .5rem;
+
+  span {
+    color: whitesmoke;
+  }
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  >div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    >div{
+        margin-top: 2rem;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+  }
+  .menu {
+    position: relative;
+    height: 7rem;
+    width: 7rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:before {
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        transform: rotate(45deg);
+        box-shadow: 0px 0px 12px gray;
+    }
+    &:after {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        content: '';
+        height: calc(100% - 22px);
+        width: calc(100% - 22px);
+        border: 1px solid orange;
+        transform: rotate(45deg);
+    }
+
+    span{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+
+    > div {
+        span:first-child {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        span:last-child {
+            font-size: .8rem;
+            font-weight: bold;
+            margin-left: .2rem;
+        }
+    }
+    >span{
+        font-size: .7rem;
+        line-height: 1rem;
+        margin-top: -.5rem;
+    }
+  }
+
+  .popup{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    >div{
+        position: sticky;
+        animation: popupFlipZoom 1s ease forwards;
+        transform-origin: center;
+        background-color: #282c34;
+        border-radius: 10%;
+        width: 70%;
+        max-height: 90%;
+        padding: .5rem;
+        padding-top: 0;
+        box-shadow: 0px 0px 12px gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        overflow: hidden;
+        .title{
+            width: 100%;
+            font-size: 1.5rem;
+            padding: .5rem;
+            color: white;
+            background-color: #22252c;
+        }
+        .body{
+            font-size: 1rem;
+            margin-top: 1rem;
+            display: flex;
+            text-align: left;
+            padding: .5rem;
+        }
+        .footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 30%;
+        }
+    }
+  }
+
+  @keyframes popupFlipZoom {
+    0% {
+        transform: scale(0) rotateY(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotateY(720deg);
+        opacity: 1;
+    }
+  }
+}

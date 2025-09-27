@@ -1,0 +1,96 @@
+.letter {
+  position: relative;
+  background: #fff8dc;
+  padding-top: 0.5rem;
+  padding-left: 2rem;
+  width: 250px;
+  height: 300px;
+  font-family: sans-serif;
+  position: relative;
+  clip-path: polygon(
+    0 0,
+    14px 4%,
+    3px 8%,
+    18px 13%,
+    5px 19%,
+    16px 25%,
+    2px 32%,
+    20px 38%,
+    6px 44%,
+    17px 51%,
+    4px 57%,
+    18px 63%,
+    8px 69%,
+    15px 74%,
+    3px 80%,
+    19px 86%,
+    6px 92%,
+    14px 97%,
+    0 100%,
+    100% 100%,
+    100% 0
+  );
+
+  span {
+    display: flex;
+    color: black;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+
+    .coret {
+      &:before {
+        content: "";
+        position: absolute;
+        border-top: 2px solid blue;
+        width: 2.3rem;
+        top: 0.4rem;
+        right: 11.1rem;
+        border-radius: 70% 90% 0% 0%;
+        transform: rotate(-3deg);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        border-top: 2px solid blue;
+        width: 2.6rem;
+        bottom: 0.37rem;
+        right: 10rem;
+        border-radius: 70% 90% 0% 0%;
+        transform: rotate(-1deg);
+      }
+    }
+    .ttd {
+      &:before {
+        content: "";
+        position: absolute;
+        border-top: 2px solid blue;
+        width: 2.3rem;
+        top: 0.5rem;
+        right: 4.1rem;
+        border-radius: 70% 90% 0% 0%;
+        transform: rotate(-3deg);
+      }
+    }
+  }
+
+  .wave {
+    position: relative;
+    height: 3px;
+    width: 120%;
+    transform: rotate(180deg);
+    left: 6rem;
+    &:before {
+        position: absolute;
+        content: '';
+        top: 0px;
+        height: 8px;
+        width: 100%;
+        background-size: 12px 12px;
+        background-position: 0px -3px;
+        background-image: -webkit-radial-gradient(50% 0%, circle, blue 50%, transparent 55%);
+        background-image: -moz-radial-gradient(50% 0%, circle, blue 50%, transparent 55%);
+        background-image: radial-gradient(circle at 50% 0%, blue 50%, transparent 55%);
+    }
+  }
+}
