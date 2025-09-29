@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="main-card">
       <span className='title'>To You ...</span>
-      <div>
+      <div style={{marginTop: '3rem'}}>
         <div>
           <div className='menu' onClick={() => handleClick('open1')}>
             <div>
@@ -174,20 +174,20 @@ function App() {
             <div className='footer'>
               {open.open1 && 
                 <div>
-                  <Tiket value='020051' style={{transform: 'rotate(2deg)', bottom: -30, right: 5}}/>
-                  <Tiket value='020052' style={{transform: 'rotate(-2deg)', bottom: -2, left: 4}}/>
+                  <Tiket value='020051' style={{transform: 'rotate(2deg) scale(.8)', bottom: -30, right: 5}}/>
+                  <Tiket value='020052' style={{transform: 'rotate(-2deg) scale(.8)', bottom: -2, left: 4}}/>
                 </div>
               }
               {open.open3 && 
                 <div style={{display: 'flex'}}>
-                  <Letter style={{bottom: '-3.5rem', right: 5, left: '1rem', transform: 'rotate(5deg)'}}/>
-                  <Letter flip style={{bottom: '-5rem', right: 5, left: 0, transform: 'rotate(-2deg)', zIndex: 1}}/>
+                  <Letter style={{bottom: '-3.5rem', left: '2.5rem', transform: 'rotate(5deg) scale(.8)'}}/>
+                  <Letter flip style={{bottom: '-5rem', right: '2.2rem', transform: 'rotate(-7deg) scale(.8)', zIndex: 1}}/>
                 </div>
               }
               {open.open5 && 
                 <div style={{display: 'flex'}}>
-                  <LetterWhite style={{bottom: '-.5rem', right: 5, left: '1rem', transform: 'rotate(5deg)'}}/>
-                  <LetterWhite fromMe style={{bottom: '-.5rem', right: 5, left: 0, transform: 'rotate(-2deg)', zIndex: 1}}/>
+                  <LetterWhite style={{bottom: '-.5rem', left: '1.5rem', transform: 'rotate(5deg) scale(.8)'}}/>
+                  <LetterWhite fromMe style={{bottom: '-.5rem', right: '1.5rem', transform: 'rotate(-2deg) scale(.8)', zIndex: 1}}/>
                 </div>
               }
             </div>

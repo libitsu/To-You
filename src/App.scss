@@ -7,6 +7,8 @@
   flex-direction: column;
   align-items: center;
   padding: .5rem;
+  overflow: hidden;
+  scroll-behavior: smooth;
 
   span {
     color: whitesmoke;
@@ -19,14 +21,17 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
-    justify-content: space-around;
+    height: 70%;
+    justify-content: center;
     align-items: center;
     >div{
-        margin-top: 2rem;
         display: flex;
         width: 100%;
-        justify-content: space-around;
+        justify-content: center;
+    }
+    >span{
+      position: relative;
+      bottom: -7rem;
     }
   }
   .menu {
@@ -38,6 +43,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 2rem 0 2rem;
 
     &:before {
         position: absolute;
@@ -82,6 +88,8 @@
 
   .popup{
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -92,10 +100,11 @@
     >div{
         position: sticky;
         animation: popupFlipZoom 1s ease forwards;
+        -webkit-animation: popupFlipZoom 1s ease forwards;
         transform-origin: center;
         background-color: #282c34;
         border-radius: 10%;
-        width: 70%;
+        width: 90%;
         max-height: 90%;
         padding: .5rem;
         padding-top: 0;
@@ -129,6 +138,16 @@
     }
   }
 
+  @-webkit-keyframes popupFlipZoom {
+    0% {
+        transform: scale(0) rotateY(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotateY(720deg);
+        opacity: 1;
+    }
+  }
   @keyframes popupFlipZoom {
     0% {
         transform: scale(0) rotateY(0deg);
