@@ -99,8 +99,10 @@
     background: rgba(0, 0, 0, 0.5);
     >div{
         position: sticky;
-        animation: popupFlipZoom 1s ease forwards;
-        -webkit-animation: popupFlipZoom 1s ease forwards;
+        -webkit-animation: popupFlipZoom;
+        -webkit-animation-duration: 1s;
+        animation: popupFlipZoom;
+        animation-duration: 1s;
         -webkit-transform-style: preserve-3d;
         transform-style: preserve-3d;
         -webkit-backface-visibility: hidden;
@@ -143,26 +145,26 @@
   }
 
   @-webkit-keyframes popupFlipZoom {
-    0% {
-      -webkit-transform: scale(0) rotateY(0deg);
-      transform: scale(0) rotateY(0deg);
+    from {
+      -webkit-transform: scale(0);
+      transform: scale(0);
       opacity: 0;
     }
-    100% {
-      -webkit-transform: scale(1) rotateY(720deg);
-      transform: scale(1) rotateY(720deg);
+    to {
+      -webkit-transform: scale(1);
+      transform: scale(1);
       opacity: 1;
     }
   }
   @keyframes popupFlipZoom {
-    0% {
-      -webkit-transform: scale(0) rotateY(0deg);
-      transform: scale(0) rotateY(0deg);
+    from {
+      -webkit-transform: scale(0);
+      transform: scale(0);
       opacity: 0;
     }
-    100% {
-      -webkit-transform: scale(1) rotateY(720deg);
-      transform: scale(1) rotateY(720deg);
+    to {
+      -webkit-transform: scale(1);
+      transform: scale(1);
       opacity: 1;
     }
   }
