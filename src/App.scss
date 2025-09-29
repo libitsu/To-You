@@ -103,8 +103,8 @@
         -webkit-animation: popupFlipZoom 1s ease forwards;
         -webkit-transform-style: preserve-3d;
         transform-style: preserve-3d;
-        // -webkit-backface-visibility: hidden;
-        // backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
         transform-origin: center;
         background-color: #282c34;
         border-radius: 10%;
